@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+        {% load static %}
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Brainfood</title>
+		<link rel="stylesheet" href="https://use.typekit.net/ldt4auk.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="demo-4 loading">
+		<main>
+            <div id="container"></div>
+            <div class="frame">
+                <div class="frame__title-wrap">
+					<h1 class="frame__title">Adrian Ziegler</h1>
+					<div class="frame__links">
+                        <a>Visitor Count: xx</a>
+                        <a href="https://github.com/MkuuWaUjinga">GitHub</a>
+					</div>
+				</div>
+				<p class="frame__credits">Inspired by <a href="https://github.com/akella/ExplodingObjects">Exploding 3D Shapes</a></p>
+            </div>
+			<div class="content">
+				<div class="content__item">
+					<button class="content__button">Feed me</button>
+				</div>
+			</div>
+		</main>
+		<script src={% static "js/brain.js" %}></script>
+		<script src={% static "js/TweenMax.min.js" %}></script>
+		<script src={% static "js/demo.js" %}></script>
+	</body>
+</html>

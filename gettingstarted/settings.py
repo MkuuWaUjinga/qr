@@ -51,7 +51,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "hello",
+    "qrhome",
 ]
 
 MIDDLEWARE = [
@@ -141,7 +141,6 @@ STATIC_URL = "static/"
 
 # Enable WhiteNoise's GZip compression of static assets.
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-
 
 # Test Runner Config
 class HerokuDiscoverRunner(DiscoverRunner):
