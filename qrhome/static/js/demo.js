@@ -23,7 +23,7 @@
         }
     );
 
-    animation.camera.position.z = 500;
+    animation.camera.position.z = 610;
 
     let targetMouseX = 0, mouseX = 0, ta = 0;
     const sign = n => n === 0 ? 1 : n/Math.abs(n);    
