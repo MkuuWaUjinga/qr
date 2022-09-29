@@ -27,12 +27,6 @@
 
     let targetMouseX = 0, mouseX = 0, ta = 0;
     const sign = n => n === 0 ? 1 : n/Math.abs(n);    
-    document.addEventListener('mousemove',(e) => {
-        targetMouseX = 2*(e.clientX - animation.width/2)/animation.width;
-    });
-    document.addEventListener('touchmove',(e) => {
-        targetMouseX = ( e.touches[0].clientX / animation.width ) * 2 - 1;
-    });
 
     const draw = () => {
         if ( animation ) {
@@ -71,7 +65,16 @@
         if ( isOpen ) return;
         new TimelineMax()
         .to(animation.camera.position, 1, {
-            z: 450,
+            z: 550,
+            ease: Expo.easeOut
+        }, 0);
+    });
+
+     document.addEventListener('touchstart', () => {
+        if ( isOpen ) return;
+        new TimelineMax()
+        .to(animation.camera.position, 1, {
+            z: 550,
             ease: Expo.easeOut
         }, 0);
     });
@@ -80,7 +83,16 @@
         if ( isOpen ) return;
         new TimelineMax()
         .to(animation.camera.position, 1, {
-            z: 500,
+            z: 610,
+            ease: Expo.easeOut
+        }, 0);
+    });
+
+    document.addEventListener('touchend', () => {
+        if ( isOpen ) return;
+        new TimelineMax()
+        .to(animation.camera.position, 1, {
+            z: 610,
             ease: Expo.easeOut
         }, 0);
     });
