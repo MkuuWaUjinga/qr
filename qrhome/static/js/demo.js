@@ -23,7 +23,7 @@
         }
     );
 
-    animation.camera.position.z = 610;
+    animation.camera.position.z = 750;
 
     let targetMouseX = 0, mouseX = 0, ta = 0;
     const sign = n => n === 0 ? 1 : n/Math.abs(n);    
@@ -39,6 +39,15 @@
     }
     draw();
 
+    if ( animation ) {
+        console.log("hi")
+        TweenMax.to(animation.scene.rotation, 300, {
+            y: 360,
+            ease: Linear.easeNone,
+            repeat: -1,
+            paused: false
+        })
+    }
 
     let isOpen = false;
     enterCtrl.addEventListener('click', () => {
@@ -65,7 +74,7 @@
         if ( isOpen ) return;
         new TimelineMax()
         .to(animation.camera.position, 1, {
-            z: 550,
+            z: 700,
             ease: Expo.easeOut
         }, 0);
     });
@@ -74,7 +83,7 @@
         if ( isOpen ) return;
         new TimelineMax()
         .to(animation.camera.position, 1, {
-            z: 550,
+            z: 700,
             ease: Expo.easeOut
         }, 0);
     });
@@ -83,7 +92,7 @@
         if ( isOpen ) return;
         new TimelineMax()
         .to(animation.camera.position, 1, {
-            z: 610,
+            z: 750,
             ease: Expo.easeOut
         }, 0);
     });
@@ -92,7 +101,7 @@
         if ( isOpen ) return;
         new TimelineMax()
         .to(animation.camera.position, 1, {
-            z: 610,
+            z: 750,
             ease: Expo.easeOut
         }, 0);
     });
